@@ -32,4 +32,8 @@ router.get("/songs", (req, res) => {
   res.json(songs);
 });
 
+app.get("/", (req, res) => {
+  res.send("<h2>Please use API for request<h2>");
+});
+
 app.use("/api", router);
