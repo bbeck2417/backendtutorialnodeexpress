@@ -3,12 +3,12 @@ const { title } = require("node:process");
 const cors = require("cors");
 const router = express.Router();
 const app = express();
-const port = 3000;
+const port = 5000;
 
 app.use(cors());
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Server running on http://0.0.0.0:${port}`);
 });
 
 router.get("/songs", (req, res) => {
